@@ -9,7 +9,7 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
-body { margin: 0; font-size: 1em; line-height: 1.4; }
+body { margin: 0; font-size: 1em; line-height: 1.4; background-color: #F0ECEB;}
 
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
@@ -84,14 +84,14 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
     ALL: Orange Theme
    =================== */
 
-#header-container{ border-bottom: 20px solid #e44d26; }
-#footer-container{ border-top:    20px solid #e44d26; }
-#main aside      { border-top:    20px solid #e44d26; }
+#header-container{ }
+#footer-container{ }
+#main aside      { border-left:    10px solid #c97a30; }
 
 #header-container,
 #footer-container,
 #main aside{
-	background:#f16529;
+	background:#3C6E3F;
 }
 
 #title{ color:white; }
@@ -107,8 +107,7 @@ nav a{
 	display:block;
 	margin-bottom:10px;
 	padding:15px 0;
-
-	background:#e44d26;
+	background-color: #063;
 	color:white;
 
 	text-align:center;
@@ -180,8 +179,9 @@ nav a:hover{
 		float:left;
 		width:27%;
 		margin:0 1.7%;
-		padding:25px 2%;
+		padding:22px 2%;
 		margin-bottom:0;
+		background-color: #063;
 	}
 	
 	nav li:first-child a{ margin-left:0;  }
@@ -207,9 +207,9 @@ nav a:hover{
 
 	#header-container,
 	#main aside{
-		-webkit-box-shadow:0 5px 10px #aaa;
+		/* -webkit-box-shadow:0 5px 10px #aaa;
 		   -moz-box-shadow:0 5px 10px #aaa;
-		        box-shadow:0 5px 10px #aaa;
+		        box-shadow:0 5px 10px #aaa; */
 	}
 
 /* ============
@@ -284,3 +284,5 @@ nav a:hover{
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
+
+h5{ margin: 0;}

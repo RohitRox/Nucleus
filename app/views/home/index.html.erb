@@ -1,1 +1,29 @@
-<h1>ok</h1>
+<% if @projects.empty? %>
+
+No projects created yet!
+
+<% else %>
+<h2>My Projects</h2>
+<ul>
+<% @projects.each do |p| %>
+	<li><%=p.name %></li>
+<% end %>
+</ul>
+<% end %>
+
+
+
+<% if @own_projects.empty? %>
+
+You are not connected to any projects created yet!
+
+<% else %>
+<h2>Projects I am working on</h2>
+<ul>
+<% @own_projects.each do |p| %>
+	<li><%=p.name %></li>
+<% end %>
+</ul>
+<% end %>
+<br />
+<%=link_to "Create new project", new_project_path %>

@@ -13,3 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function(){
+
+	$(".chzn-select").chosen({no_results_text: "No results matched"});
+
+	$("#collaborators").chosen().change( function(){ 
+		alert($(this).attr('value')); 
+	});
+	
+});

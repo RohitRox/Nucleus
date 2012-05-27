@@ -2,7 +2,7 @@
 
 <p>
   <b>Name:</b>
-  <%= @project.name %>
+  <%= @project.name %> (<%=@project.author.email%>)
 </p>
 
 <p>
@@ -21,10 +21,19 @@
 </p>
 
 <p>
-  <b>Users:</b>
-  <%= @project.users %>
+  <b>Collaborators:</b>
+  <% if @project.users.empty? %>
+    No collaborators
+  <% else %>
+    <% @project.users.each do |u| %>
+      <%= u.email %>
+    <% end %>
+  <% end %>
+  <br />
+
 </p>
 
+<hr />
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

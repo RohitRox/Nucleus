@@ -18,7 +18,10 @@
     <td><%= project.desc %></td>
     <td><%= project.cost %></td>
     <td><%= project.deadline %></td>
-    <td><%= project.users %></td>
+    <td><% project.users.each do |u| %>
+        <% u.email %>
+        <% end %>
+    </td>
     <td><%= link_to 'Show', project %></td>
     <td><%= link_to 'Edit', edit_project_path(project) %></td>
     <td><%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>

@@ -11,5 +11,6 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :projects
   accepts_nested_attributes_for :projects, :allow_destroy => true
   has_many :authored_projects, :class_name => "Project", :foreign_key => "author_id"
+  has_many :tasks
 
 end

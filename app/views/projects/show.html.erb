@@ -1,6 +1,15 @@
 <article>
 <section>
-  
+  <%if @project.tasks.empty? %>
+    No tasks created for the project.
+  <% else %>
+    <%  @project.tasks.each do |t| %>
+      <%=t.name %> assigned to <%=t.user.email %><br />
+    <% end %>
+  <% end %>
+  <br />
+   Create a new task:
+   <%=render "/tasks/form" %>
 </section>
 </article>
 <aside>

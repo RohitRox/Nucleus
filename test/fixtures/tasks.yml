@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  desc: MyText
+  status: MyString
+  est_days: MyString
+  project: 
+  user: 
+
+two:
+  name: MyString
+  desc: MyText
+  status: MyString
+  est_days: MyString
+  project: 
+  user: 

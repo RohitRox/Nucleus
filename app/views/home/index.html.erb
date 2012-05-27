@@ -2,14 +2,14 @@
 	
 <section>
 				
-<% if @projects.empty? %>
+<% if @own_projects.empty? %>
 
 No projects created yet!
 
 <% else %>
 <h2>My Projects</h2>
 <ul>
-<% @projects.each do |p| %>
+<% @own_projects.each do |p| %>
 	<li><%=p.name %></li>
 <% end %>
 </ul>
@@ -17,14 +17,14 @@ No projects created yet!
 
 
 
-<% if @own_projects.empty? %>
+<% if @projects.empty? %>
 
 You are not connected to any projects created yet!
 
 <% else %>
 <h2>Projects I am working on</h2>
 <ul>
-<% @own_projects.each do |p| %>
+<% @projects.each do |p| %>
 	<li><%=p.name %></li>
 <% end %>
 </ul>

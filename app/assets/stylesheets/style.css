@@ -14,9 +14,9 @@ body { margin: 0; font-size: 1em; line-height: 1.4; background-color: #fafafa;}
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
+a { color: #333; }
+a:visited { color: #333; }
+a:hover { color: #111; }
 a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
 
@@ -284,8 +284,6 @@ nav a:hover{
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
-
-h5{ margin: 0;}
 
 table {
   max-width: 100%;

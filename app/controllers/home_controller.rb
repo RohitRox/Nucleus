@@ -1,4 +1,9 @@
 class HomeController <  ApplicationController
-  def index 
+
+  before_filter :authorize_resources
+
+  def index
+ 
   end
+
 end

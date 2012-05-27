@@ -1,0 +1,5 @@
+class Project < ActiveRecord::Base
+  has_and_belongs_to_many :users
+  belongs_to :author, :class_name => "User", :foreign_key => "author_id"
+  accepts_nested_attributes_for :users, :allow_destroy => true
+end

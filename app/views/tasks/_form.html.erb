@@ -20,11 +20,11 @@
     <%= f.label :desc %><br />
     <%= f.text_area :desc %>
   </div>
-  <div class="field">
+  <div class="field pull-right">
     <%= f.label "Estimated Days" %><br />
-    <%= f.text_field :est_days %>
+    <%= f.text_field :est_days, :class=>"short" %>
   </div>
-  <div class="field">
+  <div class="field pull-left">
     <label>Assign this task</label><br />
     <select data-placeholder="Add a collaborator" class="chosen-select" tabindex="1" name="task[user_id]">
       <% User.all.each do |u| %>
@@ -32,6 +32,7 @@
       <% end %>
     </select>
   </div>
+  <hr class="clear"/>
   <div class="actions">
     <%= f.submit %>
   </div>

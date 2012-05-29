@@ -86,12 +86,14 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 
 #header-container{ }
 #footer-container{ }
-#main aside      { border-left:    10px solid #c97a30; }
+#main aside      { border-left:    10px solid #aa9b74; }
 
 #header-container,
-#footer-container,
-#main aside{
+#footer-container{
 	background:#3C6E3F;
+}
+#main aside{
+  background-color: #b7ab87;
 }
 
 #title{ color:white; }
@@ -107,7 +109,6 @@ nav a{
 	display:block;
 	margin-bottom:10px;
 	padding:8px 0;
-	background-color: #063;
 	color:white;
 	text-align:center;
 	text-decoration:none;
@@ -127,7 +128,7 @@ nav a:hover{
    ============== */
 
 #main{
-	padding:30px 0;
+	padding:30px auto;
 }
 
 #main article h1{
@@ -180,7 +181,6 @@ nav a:hover{
 		margin:0 1.7%;
 		padding:10px 2%;
 		margin-bottom:0;
-		background-color: #063;
 	}
 	
 	nav li:first-child a{ margin-left:0;  }
@@ -439,14 +439,4 @@ table {
 
 .btn:first-child , input[type="submit"]:first-child {
   *margin-left: 0;
-}
-
-#main-container{
-  min-height: 540px;
-}
-header h1{
-  margin: 10px 0px;
-}
-section h1{
-  margin: 22px 0px;
 }

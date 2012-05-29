@@ -1,18 +1,24 @@
 <article>
 <section>
   <%if @project.tasks.empty? %>
-    No tasks created for the project.
+    <p class="notice">No tasks created for the project yet.</p>
   <% else %>
+    <h2>Stories</h2>
     <%  @project.tasks.each do |t| %>
-      <%=t.name %> assigned to <%=t.user.email %><br />
-    <% end %>
+      <div class="task-block">
+      <h4><%=t.name %></h4><span class="pull-right"><%=raw get_formatted_status(t.status) %></span> 
+      EST: <%=t.est_days%> days <hr/>
+      <%=t.user.email %>
+      </div>
+      <% end %>
   <% end %>
-  <br />
-   Create a new task:
-   <%=render "/tasks/form" %>
+<div  class="clear"></div>
+<h2>Create a new task:</h2>
+<%=render "/tasks/form" %>
 </section>
 </article>
 <aside>
+<br />
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -32,7 +38,7 @@
 
 <p>
   <b>Deadline:</b>
-  <%= @project.deadline %>
+  <%= distance_of_time_in_words(Date.today,@project.deadline) %> remaining
 </p>
 
 <p>

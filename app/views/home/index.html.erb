@@ -8,9 +8,9 @@ No projects created yet!
 
 <% else %>
 <h2>My Projects</h2>
-<ul>
+<ul class="mylist">
 <% @own_projects.each do |p| %>
-	<li><%=p.name %></li>
+	<li><%=link_to p.name, p %></li>
 <% end %>
 </ul>
 <% end %>
@@ -19,13 +19,13 @@ No projects created yet!
 
 <% if @projects.empty? %>
 
-You are not connected to any projects created yet!
+<p class="notice"> You are not connected to any projects created yet!</p>
 
 <% else %>
 <h2>Projects I am working on</h2>
-<ul>
+<ul class="mylist">
 <% @projects.each do |p| %>
-	<li><%=p.name %></li>
+	<li><%=link_to p.name, p %></li>
 <% end %>
 </ul>
 <% end %>

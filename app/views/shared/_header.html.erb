@@ -1,7 +1,10 @@
 <div class="login-section">
 <ul>
-<!-- <li>Welcome User</li> -->
+<% if user_signed_in? %>
+<li><a href="users/sign_out" data-method="delete" class="button">Sign Out</a></li>
+<% else %>
 <li>Get Started <a href="/users/sign_up" class="button">Sign Up</a> 
 	Already have an account <a href="/users/sign_in" class="button ">Sign In</a></li>
+<% end %>
 </ul>
 </div>

@@ -6,8 +6,9 @@
 }
 
 body {
-	font-family: 'Comfortaa';
+	font-family: 'Comfortaa', verdana, arial;
 	background: #0099ff;
+	font-size: 12px;
 }
 
 img {
@@ -89,7 +90,6 @@ caption, th, td {
 /* Content ================================================================================ */
 
 p {
-font-size: 20px;
 color: #996633;}
 
 strong {font-weight: bold;}

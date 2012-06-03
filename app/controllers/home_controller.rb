@@ -1,10 +1,12 @@
 class HomeController <  ApplicationController
 
-  before_filter :authorize_resources
-
   def index
-    @projects = current_user.projects.all
-    @own_projects = current_user.authored_projects.all
+  	if user_signed_in?
+    	@projects = current_user.projects.all
+    	@own_projects = current_user.authored_projects.all
+	else
+		render 'home'
+	end
   end
 
 end

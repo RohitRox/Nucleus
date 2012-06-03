@@ -12,24 +12,48 @@
 </head>
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+<div class="wrapper">
+  <div class="page">
+    <div class="header-container">
+      <div class="header">
+        <div class="logo"> <a href="index.html"><img src="/assets/logo.png" width="404" height="86" alt="Nucleus" title="Nucleus" /></a> </div>
+        
+        <%=render 'shared/header'%>
 
-<%=render "shared/header" %>
+      </div>
+    </div>
+    <div class="main-container col1-layout">
+      <div class="main">
+        <div class="col-main">
+          <div class="content-top">
+            <div class="content-bottom">
+              <div class="content-mid">
+               
+                <%=yield %>
 
-<div id="main-container">
-		<div id="main" class="wrapper clearfix">
-			<%= yield %>		
-		</div> <!-- #main -->
-	</div> <!-- #main-container -->
-
-	<div id="footer-container">
-		<footer class="wrapper">
-			<h5>&copy; Nucleus 2012</h5>
-		</footer>
-	</div>
-
-
-
-
-
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-container">
+      <div class="footer">
+        <div class="footer-list">
+          <ul>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </div>
+        <div class="social-icons"> <span class="share"><img src="/assets/share.gif" width="30" height="79" alt="" /></span>
+          <ul>
+            <li><a href="#"><img src="/assets/facebook.png" width="57" height="54" alt="facebook" /></a></li>
+            <li><a href="#"><img src="/assets/google+.png" width="57" height="54" alt="google+" /></a></li>
+            <li><a href="#"><img src="/assets/twitter.png" width="57" height="54" alt="twitter" /></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
-</html>

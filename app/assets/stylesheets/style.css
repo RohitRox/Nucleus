@@ -28,7 +28,6 @@
 
 .login-section {
   float: right;
-  width: 220px;
 }
 
 .login-section ul {
@@ -40,7 +39,7 @@
   float: left;
   width: auto;
   margin-left: 20px;
-  font-size: 18px;
+  font-size: 14px;
   color: #fff;
 }
 
@@ -49,12 +48,7 @@
 }
 
 .login-section ul li a {
-  display: block;
-  width: 64px;
-  line-height: 27px;
-  text-decoration: none;
-  text-indent: -9999px;
-  background: transparent url(logout-btn.png) no-repeat 0 0;
+  
 }
 
 

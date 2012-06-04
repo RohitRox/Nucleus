@@ -1,42 +1,51 @@
-<article>
+<section class="comments">
 	
-<section>
-				
-<% if @own_projects.empty? %>
+	<% @own_projects.each do |p| %>
+	<article class="comment">
+		<a class="comment-img" href="#non">
+			<img src="/assets/ruby.png" alt="wse" width="50" height="50" />
+		</a>
 
-No projects created yet!
+		<div class="comment-body">
+			<div class="text">
+			  <p><%=link_to p.name, p %></p>
+			</div>
+			<p class="attribution"><%=p.users.count%> collaborators, Created at <%=p.created_at.strftime('%A, %b %d, %Y')%>
+			</p>
+		</div>
+		
+	</article>
+	<% end %>
 
-<% else %>
-<h2>My Projects</h2>
-<ul class="mylist">
-<% @own_projects.each do |p| %>
-	<li><%=link_to p.name, p %></li>
-<% end %>
-</ul>
-<% end %>
 
+	<% @projects.each do |p| %>
 
+		<article class="comment">
+		<a class="comment-img" href="#non">
+			<img src="/assets/ruby.png" alt="wse" width="50" height="50" />
+		</a>
 
-<% if @projects.empty? %>
+		<div class="comment-body">
+			<div class="text">
+			  <p><%=link_to p.name, p %></p>
+			</div>
+			<p class="attribution">by <b><%=p.author.email%></b>, <%=p.users.count%> collaborators, at <%=p.created_at.strftime('%A, %b %d, %Y')%>
+			</p>
+		</div>
+		
+	</article>
 
-<p class="notice"> You are not connected to any projects created yet!</p>
-
-<% else %>
-<h2>Projects I am working on</h2>
-<ul class="mylist">
-<% @projects.each do |p| %>
-	<li><%=link_to p.name, p %></li>
-<% end %>
-</ul>
-<% end %>
-<br />
-<%=link_to "Create new project", new_project_path %>
+	<% end %>
 
 </section>
-			
-</article>
 
 <aside>
 	<h3>Welcome <%=current_user.email %></h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odegestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nipharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enimturpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.
+	<hr />
+	<ul class="mylist">
+		<li><b>Authored Projects:</b> <%=@own_projects.count%></li>
+		<li><b>Colloborated Projects:</b> <%=@projects.count%></li>
+	</ul>
+	<br />
+	<%=link_to "New Project", new_project_path, :class=>"button" %>
 </aside>

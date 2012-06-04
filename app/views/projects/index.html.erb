@@ -3,8 +3,8 @@
 <section>
 
 <h2>Listing projects</h2>
-
-<table class="table table-bordered">
+<div class="table-wrapper">
+<table class="table">
   <thead>
   <tr>
     <th>Name</th>
@@ -31,7 +31,7 @@
   </tr>
 <% end %>
 </table>
-
+</div>
 <br />
 
 <%= link_to 'New Project', new_project_path %>

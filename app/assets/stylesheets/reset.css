@@ -6,7 +6,7 @@
 }
 
 body {
-	font-family: 'Comfortaa', verdana, arial;
+	font-family: verdana, arial;
 	background: #0099ff;
 	font-size: 12px;
 }
@@ -41,7 +41,8 @@ h1 {
 
 h2 {
 	font-size: 18px;
-	font-weight: normal;
+	font-weight: bold;
+	margin: 0px 0 20px 0px;
 }
 
 h3 {

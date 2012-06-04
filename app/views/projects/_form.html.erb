@@ -27,7 +27,13 @@
     <%= f.label :deadline %><br />
     <%= f.datetime_select :deadline %>
   </div>
+  <div class="field">
+    <%= f.label :category %><br />
+    <%= f.select(:category,[['Ruby', 'ruby'], ['PHP', 'php'], ['Java', 'java'], ['Python', 'python'], ['Design', 'dedign'], ['Other', 'other']]) %>
+  </div>
+  <br />
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit %> or 
+    <%= link_to 'Cancel', projects_path %>
   </div>
 <% end %>

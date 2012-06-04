@@ -1,15 +1,9 @@
-<article>
-  
-<section>
-
 <h2>Listing projects</h2>
-<div class="table-wrapper">
 <table class="table">
   <thead>
   <tr>
-    <th>Name</th>
-    <th>Desc</th>
-    <th>Cost</th>
+    <th>Project</th>
+    <th>Budget</th>
     <th>Deadline</th>
     <th>Collaborators</th>
     <th colspan="3">Actions</th>
@@ -18,8 +12,8 @@
 
 <% @projects.each do |project| %>
   <tr>
-    <td><%= project.name %></td>
-    <td><%= project.desc %></td>
+    <td><b><%= project.name %></b><br />
+      <p class="dim"><%= project.desc.slice(0..150) %></p></td>
     <td><%= project.cost %></td>
     <td><%= project.deadline.strftime('%A, %b %d') %></td>
     <td>
@@ -31,16 +25,7 @@
   </tr>
 <% end %>
 </table>
-</div>
+
 <br />
 
 <%= link_to 'New Project', new_project_path %>
-
-</section>
-      
-</article>
-
-<aside>
-  <h3>Welcome <%=current_user.email %></h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odegestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nipharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enimturpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.
-</aside>

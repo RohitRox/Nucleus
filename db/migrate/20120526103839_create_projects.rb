@@ -5,6 +5,7 @@ class CreateProjects < ActiveRecord::Migration
       t.text :desc
       t.string :cost
       t.datetime :deadline
+      t.string :category
       t.timestamps
     end
     add_index :projects, :name

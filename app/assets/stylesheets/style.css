@@ -72,6 +72,7 @@
   padding: 0 60px;
   background: transparent url(diary-mid.png) repeat-y center;
   overflow: hidden;
+  min-height: 200px;
 }
 
 .content-top {
@@ -196,7 +197,6 @@ section {
     padding-top: 20px;
     padding-right: 85px;
     padding-bottom: 6px;
-    height: auto;
     width: 600px;
     float: left;
     border-radius: 5px;
@@ -297,4 +297,7 @@ section {
   border: none;
   padding-bottom: 4px;
   margin-bottom: 4px;
+}
+p.dim{
+  color: #999;
 }

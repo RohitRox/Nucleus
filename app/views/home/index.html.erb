@@ -3,7 +3,7 @@
 	<% @own_projects.each do |p| %>
 	<article class="comment">
 		<a class="comment-img" href="#non">
-			<img src="/assets/ruby.png" alt="wse" width="50" height="50" />
+			<img src="/assets/<%=p.category%>.png" alt="wse" width="50" height="50" />
 		</a>
 
 		<div class="comment-body">
@@ -22,7 +22,7 @@
 
 		<article class="comment">
 		<a class="comment-img" href="#non">
-			<img src="/assets/ruby.png" alt="wse" width="50" height="50" />
+			<img src="/assets/<%=p.category%>.png" alt="wse" width="50" height="50" />
 		</a>
 
 		<div class="comment-body">
